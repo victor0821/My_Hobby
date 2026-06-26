@@ -1,0 +1,39 @@
+
+// main.js
+// Orquestador: coordina los módulos del sistema.
+//   · themes.js → modo oscuro
+//   · ui.js     → validación y mensajes
+//   · api.js    → comunicación con el servidor
+
+import { inicializarTema } from './themes.js';
+import { enviarComentario } from './api.js';
+import { validarFormulario, mostrarEstado } from './ui.js';
+
+// 1) Tema (modo claro / oscuro)
+inicializarTema();
+
+// 2) Formulario de comentarios
+const formulario = document.getElementById('formulario-comentarios');
+
+if (formulario) {
+    formulario.addEventListener('submit', async (evento) => {
+        evento.preventDefault(); // evita que la página se recargue
+
+        // Validar (responsabilidad de ui.js)
+        const resultado = validarFormulario(formulario);
+        if (!resultado.valido) {
+            mostrarEstado(resultado.error, 'error');
+            return;
+        }
+
+        // Enviar al servidor (responsabilidad de api.js)
+        try {
+            await enviarComentario(resultado.datos);
+            mostrarEstado('¡Tu comentario se guardó correctamente! 🙌', 'ok');
+            formulario.reset();
+        } catch (error) {
+            console.error('Fallo la petición:', error);
+            mostrarEstado(error.message, 'error');
+        }
+    });
+}

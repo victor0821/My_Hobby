@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Hobby - Estudiar Inglés</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navegación principal -->
+    <header>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#opinion">¿Qué Opinas?</a></li>
+            </ul>
+            <button id="btn-dark-mode" aria-label="Activar modo oscuro">Modo Dark</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Sección Inicio -->
+        <section id="inicio" aria-labelledby="titulo-inicio">
+            <h1 id="titulo-inicio">Mi Hobby: Estudiar Inglés</h1>
+            <p>
+                El inglés es mucho más que un idioma para mí, es una puerta abierta hacia el mundo.
+                Desde que comencé a estudiarlo, he descubierto una nueva forma de comunicarme,
+                de entender otras culturas y de acceder a conocimiento que antes estaba fuera de mi alcance.
+            </p>
+            <p>
+                Cada día dedico tiempo a aprender vocabulario nuevo, practicar pronunciación y
+                escuchar podcasts en inglés. Lo que empezó como una necesidad se convirtió en
+                una de las actividades que más disfruto en mi vida cotidiana.
+            </p>
+        </section>
+
+        <!-- Sección Galería -->
+        <section id="galeria" aria-labelledby="titulo-galeria">
+            <h2 id="titulo-galeria">Galería</h2>
+
+            <article>
+                <figure>
+                    <img src="images/English_Book.jpg" alt="Libros de inglés sobre una mesa de estudio">
+                    <figcaption>
+                        <h3>Los libros son mis mejores aliados</h3>
+                        <p>
+                            Estudiar con libros especializados me permite profundizar en la gramática
+                            y el vocabulario de forma estructurada. Cada página que paso es un paso
+                            más cerca de la fluidez que siempre he soñado.
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="images/listen_music.jpg" alt="Persona escuchando podcasts en inglés con audífonos">
+                    <figcaption>
+                        <h3>Escuchar inglés en todo momento</h3>
+                        <p>
+                            Los podcasts y audiolibros en inglés me han ayudado enormemente a mejorar
+                            mi comprensión auditiva. Escuchar hablantes nativos me permite familiarizarme
+                            con el ritmo natural del idioma.
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="images/meeting_Call.jpg" alt="Conversación en inglés por videollamada con persona del extranjero">
+                    <figcaption>
+                        <h3>Practicar con personas de todo el mundo</h3>
+                        <p>
+                            Conversar con hablantes nativos e internacionales es la práctica más valiosa.
+                            Me conecta con culturas distintas y me motiva a seguir mejorando cada día,
+                            porque el idioma cobra vida real cuando lo usas para comunicarte de verdad.
+                        </p>
+                    </figcaption>
+                </figure>
+            </article>
+
+        </section>
+
+        <!-- Sección ¿Qué Opinas? -->
+        <section id="opinion" aria-labelledby="titulo-opinion">
+            <h2 id="titulo-opinion">¿Qué Opinas?</h2>
+            <p>Me gustaría conocer tu opinión. ¡Déjame un comentario!</p>
+
+            <form id="formulario-comentarios" novalidate>
+
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre completo"
+                        required
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div>
+                    <label for="correo">Correo</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="tucorreo@ejemplo.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div>
+                    <label for="comentario">Comentario</label>
+                    <textarea
+                        id="comentario"
+                        name="comentario"
+                        rows="5"
+                        placeholder="Escribe tu comentario aquí..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">Enviar comentario</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2026 Victor Aleman. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>

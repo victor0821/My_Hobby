@@ -1,0 +1,13 @@
+# Dependencias (Render las instala con npm install)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables de entorno locales
+.env
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
