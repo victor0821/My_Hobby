@@ -1,13 +1,10 @@
-
-// main.js
-// Orquestador: coordina los módulos del sistema.
 //   · themes.js → modo oscuro
 //   · ui.js     → validación y mensajes
 //   · api.js    → comunicación con el servidor
 
-import { inicializarTema } from './themes.js';
-import { enviarComentario, obtenerComentarios } from './api.js';
-import { validarFormulario, mostrarEstado, mostrarComentarios } from './ui.js';
+import { inicializarTema } from './themes.min.js';
+import { enviarComentario, obtenerComentarios } from './api.min.js';
+import { validarFormulario, mostrarEstado, mostrarComentarios } from './ui.min.js';
  
 // 1) Tema (modo claro / oscuro)
 inicializarTema();
